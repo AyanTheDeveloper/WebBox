@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,21 +43,21 @@ namespace HackBox
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string chromePath = @"C:\Program Files\Google\Chrome\Application\chrome.exe";
+            //string chromePath = @"C:\Program Files\Google\Chrome\Application\chrome.exe";
             
-            if (File.Exists(chromePath)==true)
-            {
+            //if (File.Exists(chromePath)==true)
+            //{
                 string website = textBox1.Text;
                 var prs = new ProcessStartInfo("chrome.exe");
                 prs.Arguments = website;
                 Process.Start(prs);
                 
-            }
-            if (File.Exists(chromePath)==false)
-            {
-                MessageBox.Show("Chrome Is Not Installed! Please Install It!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            //}
+            //if (File.Exists(chromePath)==false)
+            //{
+            //    MessageBox.Show("Chrome Is Not Installed! Please Install It!", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                 
-            }
+            //}
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -160,3 +160,4 @@ namespace HackBox
         }
     }
 }
+
